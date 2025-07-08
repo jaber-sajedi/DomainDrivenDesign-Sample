@@ -13,19 +13,24 @@ namespace MyApp.Domain.Entities
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
 
-        // فقط داخل کلاس اجازه تغییر هست
-        public User(string userName, string firstName, string lastName)
+        // EF Core نیاز به سازنده بدون پارامتر دارد
+        protected User() { }
+
+        private User(Guid id, string userName, string firstName, string lastName)
         {
-            Id = Guid.NewGuid();
+            Id = id;
             UserName = userName;
             FirstName = firstName;
             LastName = lastName;
         }
 
-        // متد مخصوص تغییر داخل کلاس
-        public void UpdateName(string newName)
+        public static User Create(string userName, string firstName, string lastName)
         {
-            UserName = newName;
+            if (string.IsNullOrWhiteSpace(userName))
+                throw new ArgumentException("UserName is required.");
+
+            return new User(Guid.NewGuid(), userName, firstName, lastName);
         }
     }
+
 }

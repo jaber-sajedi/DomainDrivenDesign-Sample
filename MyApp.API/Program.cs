@@ -1,21 +1,38 @@
-
+﻿using FluentValidation;
+using MediatR;
+using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using MyApp.Application.Users.Commands;
+using MyApp.Application.Mappings;
 using MyApp.Domain.UnitOfWork;
 using MyApp.Infrastructure.UnitOfWork;
+using MyApp.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddSingleton<IUnitOfWork, InMemoryUnitOfWork>();
+// کانفیگ EF Core SQLite
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Add services to the container.
+// ثبت UnitOfWork و Repository EF Core
+builder.Services.AddScoped<IUnitOfWork, EfUnitOfWork>();
+
+// ثبت Validatorها
+builder.Services.AddValidatorsFromAssemblyContaining<AddUserCommandValidator>();
+
+// ثبت AutoMapper
+builder.Services.AddAutoMapper(typeof(UserProfile).Assembly);
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// ثبت MediatR
+builder.Services.AddMediatR(typeof(AddUserCommand).Assembly);
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -23,9 +40,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();

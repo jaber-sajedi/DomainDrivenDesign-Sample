@@ -9,8 +9,8 @@ namespace MyApp.Domain.Specifications.Users
 {
     public class UserByNameSpecification : BaseSpecification<User>
     {
-        public UserByNameSpecification(string name)
-            : base(user => user.UserName.Contains(name))
+        public UserByNameSpecification(string userName)
+            : base(x => string.IsNullOrEmpty(userName) || x.UserName.Contains(userName))
         {
         }
     }

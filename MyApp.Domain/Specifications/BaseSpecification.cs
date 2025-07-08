@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace MyApp.Domain.Specifications
 {
-    public abstract class BaseSpecification<T>
+    public abstract class BaseSpecification<TEntity>
     {
-        public Expression<Func<T, bool>> Criteria { get; }
+        public Expression<Func<TEntity, bool>> Criteria { get; }
 
-        protected BaseSpecification(Expression<Func<T, bool>> criteria)
+        protected BaseSpecification(Expression<Func<TEntity, bool>> criteria)
         {
             Criteria = criteria;
         }

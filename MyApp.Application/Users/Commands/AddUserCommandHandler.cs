@@ -1,4 +1,5 @@
-﻿using MyApp.Domain.Entities;
+﻿using MediatR;
+using MyApp.Domain.Entities;
 using MyApp.Domain.UnitOfWork;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MyApp.Application.Users.Commands
 {
-    public class AddUserCommandHandler
+    public class AddUserCommandHandler : IRequestHandler<AddUserCommand, Guid>
     {
         private readonly IUnitOfWork _unitOfWork;
 
@@ -17,11 +18,12 @@ namespace MyApp.Application.Users.Commands
             _unitOfWork = unitOfWork;
         }
 
-        public void Handle(AddUserCommand command)
+        public Task<Guid> Handle(AddUserCommand request, CancellationToken cancellationToken)
         {
-            var user = new User(command.UserName, command.FirstName, command.LastName);
+            var user = User.Create(request.UserName, request.FirstName, request.LastName);
             _unitOfWork.Repository<User>().Add(user);
             _unitOfWork.Commit();
+            return Task.FromResult(user.Id);
         }
     }
 }

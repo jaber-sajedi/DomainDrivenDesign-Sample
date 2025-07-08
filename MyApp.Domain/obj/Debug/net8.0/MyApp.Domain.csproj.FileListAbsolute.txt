@@ -31,3 +31,4 @@ C:\Users\j.sajedi\Desktop\test\DomainDrivenDesign-Sample\MyApp.Domain\obj\Debug\
 C:\Users\j.sajedi\Desktop\test\DomainDrivenDesign-Sample\MyApp.Domain\obj\Debug\net8.0\refint\MyApp.Domain.dll
 C:\Users\j.sajedi\Desktop\test\DomainDrivenDesign-Sample\MyApp.Domain\obj\Debug\net8.0\MyApp.Domain.pdb
 C:\Users\j.sajedi\Desktop\test\DomainDrivenDesign-Sample\MyApp.Domain\obj\Debug\net8.0\ref\MyApp.Domain.dll
+C:\Users\j.sajedi\Desktop\test\DomainDrivenDesign-Sample\MyApp.Domain\obj\Debug\net8.0\MyApp.Domain.sourcelink.json

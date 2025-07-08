@@ -9,8 +9,7 @@ namespace MyApp.Domain.Repositories
 {
     public interface IRepository<TEntity> where TEntity : class
     {
-        IEnumerable<TEntity> Find(BaseSpecification<TEntity> specification);
         void Add(TEntity entity);
-        IEnumerable<TEntity> GetAll();
+        IEnumerable<TEntity> Find(BaseSpecification<TEntity> specification);
     }
 }
