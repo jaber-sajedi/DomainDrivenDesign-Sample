@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q7BuB6toi9A=",
+  "dgSpecHash": "CNytGg+iCj4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.API\\MyApp.API.csproj",
+  "projectFilePath": "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\DomainDrivenDesign-Sample\\MyApp.API\\MyApp.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\j.sajedi\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\j.sajedi\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

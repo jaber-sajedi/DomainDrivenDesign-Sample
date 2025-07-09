@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IQpqplm/fhc=",
+  "dgSpecHash": "ZYS7AUhzCtE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\DomainDrivenDesign-Sample\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\j.sajedi\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\j.sajedi\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
