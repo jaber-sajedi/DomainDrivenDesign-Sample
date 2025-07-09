@@ -46,3 +46,6 @@ C:\Users\j.sajedi\Desktop\test\DomainDrivenDesign-Sample\MyApp.Infrastructure\ob
 C:\Users\j.sajedi\Desktop\test\DomainDrivenDesign-Sample\MyApp.Infrastructure\obj\Debug\net8.0\MyApp.Infrastructure.sourcelink.json
 C:\Users\j.sajedi\Desktop\test\DomainDrivenDesign-Sample\MyApp.Infrastructure\bin\Debug\net8.0\MyApp.Infrastructure.runtimeconfig.json
 C:\Users\j.sajedi\Desktop\test\DomainDrivenDesign-Sample\MyApp.Infrastructure\obj\Debug\net8.0\MyApp.Infrastructure.genruntimeconfig.cache
+C:\Users\j.sajedi\Desktop\DomainDrivenDesign-Sample\MyApp.Infrastructure\obj\Debug\net8.0\MyApp.Infrastructure.sourcelink.json
+C:\Users\j.sajedi\Desktop\DomainDrivenDesign-Sample\MyApp.Infrastructure\bin\Debug\net8.0\MyApp.Infrastructure.runtimeconfig.json
+C:\Users\j.sajedi\Desktop\DomainDrivenDesign-Sample\MyApp.Infrastructure\obj\Debug\net8.0\MyApp.Infrastructure.genruntimeconfig.cache

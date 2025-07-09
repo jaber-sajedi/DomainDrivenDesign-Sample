@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "WkFJBL8ulY8=",
+  "dgSpecHash": "vq2sYoBiMvw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Domain\\MyApp.Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Domain\\MyApp.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\j.sajedi\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

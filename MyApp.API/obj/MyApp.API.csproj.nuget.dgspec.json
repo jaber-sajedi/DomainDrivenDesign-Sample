@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.API\\MyApp.API.csproj": {}
+    "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.API\\MyApp.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.API\\MyApp.API.csproj": {
+    "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.API\\MyApp.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.API\\MyApp.API.csproj",
+        "projectUniqueName": "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.API\\MyApp.API.csproj",
         "projectName": "MyApp.API",
-        "projectPath": "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.API\\MyApp.API.csproj",
+        "projectPath": "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.API\\MyApp.API.csproj",
         "packagesPath": "C:\\Users\\j.sajedi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.API\\obj\\",
+        "outputPath": "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,14 +32,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Application\\MyApp.Application.csproj": {
-                "projectPath": "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Application\\MyApp.Application.csproj"
+              "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Application\\MyApp.Application.csproj": {
+                "projectPath": "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Application\\MyApp.Application.csproj"
               },
-              "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Domain\\MyApp.Domain.csproj": {
-                "projectPath": "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Domain\\MyApp.Domain.csproj"
+              "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Domain\\MyApp.Domain.csproj": {
+                "projectPath": "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Domain\\MyApp.Domain.csproj"
               },
-              "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj"
+              "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj"
               }
             }
           }
@@ -113,14 +113,14 @@
         }
       }
     },
-    "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Application\\MyApp.Application.csproj": {
+    "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Application\\MyApp.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Application\\MyApp.Application.csproj",
+        "projectUniqueName": "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Application\\MyApp.Application.csproj",
         "projectName": "MyApp.Application",
-        "projectPath": "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Application\\MyApp.Application.csproj",
+        "projectPath": "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Application\\MyApp.Application.csproj",
         "packagesPath": "C:\\Users\\j.sajedi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Application\\obj\\",
+        "outputPath": "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -141,8 +141,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Domain\\MyApp.Domain.csproj": {
-                "projectPath": "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Domain\\MyApp.Domain.csproj"
+              "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Domain\\MyApp.Domain.csproj": {
+                "projectPath": "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Domain\\MyApp.Domain.csproj"
               }
             }
           }
@@ -182,6 +182,10 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
@@ -207,14 +211,14 @@
         }
       }
     },
-    "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Domain\\MyApp.Domain.csproj": {
+    "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Domain\\MyApp.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Domain\\MyApp.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Domain\\MyApp.Domain.csproj",
         "projectName": "MyApp.Domain",
-        "projectPath": "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Domain\\MyApp.Domain.csproj",
+        "projectPath": "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Domain\\MyApp.Domain.csproj",
         "packagesPath": "C:\\Users\\j.sajedi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Domain\\obj\\",
+        "outputPath": "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -251,6 +255,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -271,14 +281,14 @@
         }
       }
     },
-    "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj": {
+    "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj",
         "projectName": "MyApp.Infrastructure",
-        "projectPath": "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\j.sajedi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -299,8 +309,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Domain\\MyApp.Domain.csproj": {
-                "projectPath": "C:\\Users\\j.sajedi\\Desktop\\test\\DomainDrivenDesign-Sample\\MyApp.Domain\\MyApp.Domain.csproj"
+              "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Domain\\MyApp.Domain.csproj": {
+                "projectPath": "C:\\Users\\j.sajedi\\Desktop\\DomainDrivenDesign-Sample\\MyApp.Domain\\MyApp.Domain.csproj"
               }
             }
           }

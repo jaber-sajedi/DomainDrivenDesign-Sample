@@ -1,5 +1,4 @@
-﻿using FluentValidation;
-using MediatR;
+﻿using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +7,5 @@ using System.Threading.Tasks;
 
 namespace MyApp.Application.Users.Commands
 {
-    public record AddUserCommand(string UserName, string Password) : IRequest<Guid>;
-
+    public record LoginCommand(string UserName, string Password) : IRequest<string>;
 }

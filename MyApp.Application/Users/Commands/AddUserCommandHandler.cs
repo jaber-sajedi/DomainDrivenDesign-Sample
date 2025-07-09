@@ -20,7 +20,7 @@ namespace MyApp.Application.Users.Commands
 
         public Task<Guid> Handle(AddUserCommand request, CancellationToken cancellationToken)
         {
-            var user = User.Create(request.UserName, request.FirstName, request.LastName);
+            var user = User.Create(request.UserName, request.Password);
             _unitOfWork.Repository<User>().Add(user);
             _unitOfWork.Commit();
             return Task.FromResult(user.Id);

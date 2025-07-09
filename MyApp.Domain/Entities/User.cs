@@ -10,27 +10,29 @@ namespace MyApp.Domain.Entities
     {
         public Guid Id { get; private set; }
         public string UserName { get; private set; }
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
+        public string PasswordHash { get; private set; }  // پسورد هش شده
 
-        // EF Core نیاز به سازنده بدون پارامتر دارد
-        protected User() { }
-
-        private User(Guid id, string userName, string firstName, string lastName)
+        private User(Guid id, string userName, string passwordHash)
         {
             Id = id;
             UserName = userName;
-            FirstName = firstName;
-            LastName = lastName;
+            PasswordHash = passwordHash;
         }
 
-        public static User Create(string userName, string firstName, string lastName)
+        public static User Create(string userName, string password)
         {
-            if (string.IsNullOrWhiteSpace(userName))
-                throw new ArgumentException("UserName is required.");
+            if (string.IsNullOrWhiteSpace(userName) || string.IsNullOrWhiteSpace(password))
+                throw new ArgumentException("UserName and Password are required.");
 
-            return new User(Guid.NewGuid(), userName, firstName, lastName);
+            var passwordHash = BCrypt.Net.BCrypt.HashPassword(password);
+            return new User(Guid.NewGuid(), userName, passwordHash);
+        }
+
+        public bool VerifyPassword(string password)
+        {
+            return BCrypt.Net.BCrypt.Verify(password, PasswordHash);
         }
     }
+
 
 }
