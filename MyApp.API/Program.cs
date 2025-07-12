@@ -11,6 +11,9 @@ using MyApp.Infrastructure.UnitOfWork;
 using MyApp.Infrastructure.Persistence;
 using MyApp.Application.Services;
 using System.Text;
+using MyApp.Application.Users.Queries;
+using MyApp.Application.Roles.Commands;
+using MyApp.Application.Roles.Queries;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -48,6 +51,10 @@ builder.Services.AddAutoMapper(typeof(UserProfile).Assembly);
 
 // ثبت MediatR
 builder.Services.AddMediatR(typeof(AddUserCommand).Assembly);
+builder.Services.AddMediatR(typeof(GetUsersWithRolesQuery).Assembly);
+
+builder.Services.AddMediatR(typeof(AddRoleCommand).Assembly);
+builder.Services.AddMediatR(typeof(GetRolesQuery).Assembly);
 
 builder.Services.AddControllers();
 
@@ -91,6 +98,14 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
+// اجرای مایگریشن و Seed Data
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    dbContext.Database.Migrate();  // مایگریشن‌ها را اعمال کن
+}
+
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -101,7 +116,7 @@ app.UseCors("AllowReactApp");
 
 app.UseHttpsRedirection();
 
-app.UseAuthentication(); // فعال کردن احراز هویت
+app.UseAuthentication();
 
 app.UseAuthorization();
 

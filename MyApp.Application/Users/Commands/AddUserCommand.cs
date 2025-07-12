@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyApp.Application.Users.Commands
 {
-    public record AddUserCommand(string UserName, string Password) : IRequest<Guid>;
+    public record AddUserCommand(string UserName, string Password, Guid RoleId) : IRequest<Guid>;
+
 
 }

@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using MyApp.Application.DTOs;
 using MyApp.Application.Users.Commands;
 using MyApp.Application.Users.Queries;
 using MyApp.Domain.UnitOfWork;
@@ -52,5 +53,15 @@ namespace MyApp.API.Controllers
             var users = await _mediator.Send(new SearchUsersQuery(userName));
             return Ok(users);
         }
+
+
+        [HttpGet("get-user-role")]
+        public async Task<ActionResult<List<UserWithRoleDto>>> GetUsersWithRoles()
+        {
+            var users = await _mediator.Send(new GetUsersWithRolesQuery());
+            return Ok(users);
+        }
+
+
     }
 }

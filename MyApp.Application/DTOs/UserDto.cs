@@ -10,5 +10,10 @@ namespace MyApp.Application.DTOs
     {
         public Guid Id { get; set; }
         public string UserName { get; set; } = string.Empty;
+
+        // افزودن اطلاعات مربوط به نقش
+        public Guid RoleId { get; set; }
+        public string RoleName { get; set; } = string.Empty;
     }
+
 }

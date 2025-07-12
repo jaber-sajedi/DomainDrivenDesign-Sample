@@ -7,9 +7,13 @@ using System.Threading.Tasks;
 
 namespace MyApp.Domain.UnitOfWork
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork : IDisposable
     {
         IRepository<TEntity> Repository<TEntity>() where TEntity : class;
-        void Commit();  // در In-Memory این متد فعلاً نمایشی است
+
+        void Commit();
+
+        Task CommitAsync();
     }
+
 }

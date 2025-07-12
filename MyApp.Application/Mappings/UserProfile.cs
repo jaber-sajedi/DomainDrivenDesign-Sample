@@ -13,7 +13,16 @@ namespace MyApp.Application.Mappings
     {
         public UserProfile()
         {
-            CreateMap<User, UserDto>();
+            CreateMap<User, UserDto>()
+      .ForMember(dest => dest.RoleName, opt => opt.MapFrom(src => src.Role.Name));
+            CreateMap<Role, RoleDto>();
+            CreateMap<Permission, PermissionDto>();
+
+            CreateMap<User, UserWithRoleDto>()
+                .ForMember(dest => dest.RoleName, opt => opt.MapFrom(src => src.Role.Name));
+
+
+
         }
     }
 }

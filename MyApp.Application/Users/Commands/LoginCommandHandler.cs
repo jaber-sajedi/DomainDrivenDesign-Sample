@@ -3,10 +3,8 @@ using MyApp.Application.Services;
 using MyApp.Domain.Entities;
 using MyApp.Domain.Specifications.Users;
 using MyApp.Domain.UnitOfWork;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using Microsoft.EntityFrameworkCore;  
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace MyApp.Application.Users.Commands
@@ -22,18 +20,17 @@ namespace MyApp.Application.Users.Commands
             _tokenGenerator = tokenGenerator;
         }
 
-        public Task<string> Handle(LoginCommand request, CancellationToken cancellationToken)
+        public async Task<string> Handle(LoginCommand request, CancellationToken cancellationToken)
         {
-            var user = _unitOfWork.Repository<User>()
+            var user = await _unitOfWork.Repository<User>()
                 .Find(new UserByNameSpecification(request.UserName))
-                .FirstOrDefault();
+                .FirstOrDefaultAsync(cancellationToken);
 
             if (user == null || !user.VerifyPassword(request.Password))
                 throw new UnauthorizedAccessException("Invalid username or password");
 
             var token = _tokenGenerator.GenerateToken(user);
-            return Task.FromResult(token);
+            return token;
         }
     }
-
 }
